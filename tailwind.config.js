@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -11,6 +13,15 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
+    container: {
+      center: true,
+    },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      gray: colors.blueGray,
+      orange: colors.orange,
+    },
     extend: {},
   },
   variants: {},
