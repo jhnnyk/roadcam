@@ -8,7 +8,9 @@
 
     <ul v-if="orderedHwys" class="grid grid-cols-4">
       <li v-for="hwy in orderedHwys" :key="hwy.index">
-        <nuxt-link :to="{ name: 'oregon-road', params: { road: hwy.name } }">
+        <nuxt-link
+          :to="{ name: 'oregon-roads-road', params: { road: hwy.name } }"
+        >
           {{ hwy.name }}
         </nuxt-link>
       </li>
@@ -19,7 +21,7 @@
 <script>
 import _ from 'lodash'
 
-import tripcheckData from '../oregon/oregonroads.json'
+import tripcheckData from '../roads/oregonroads.json'
 
 export default {
   async fetch() {

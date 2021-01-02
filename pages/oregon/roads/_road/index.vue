@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 class="text-4xl">{{ hwy }}</h1>
-    <ul>
+    <h1 class="text-4xl">Oregon - {{ hwy }}</h1>
+    <ul class="grid grid-cols-4">
       <li v-for="cam in cams" :key="cam.index">
         {{ cam['device-name'] }}
         <img :src="cam['cctv-url']" :alt="cam['device-name']" />
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import tripCheckData from '../oregon/oregonroads.json'
+import tripCheckData from '../oregonroads.json'
 
 export default {
   async fetch() {
