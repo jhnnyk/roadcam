@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center text-5xl">road.camera</h1>
+    <nuxt-link to="/oregon">Oregon</nuxt-link>
   </div>
 </template>
 
