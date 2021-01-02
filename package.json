@@ -17,6 +17,7 @@
     "lodash": "^4.17.20",
     "nuxt": "^2.14.6",
     "postcss": "^8.2.2",
+    "slugify": "^1.4.6",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
