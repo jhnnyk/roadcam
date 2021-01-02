@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-700">
+  <div class="text-gray-700 text-center">
     <TitleBar />
     <div class="container">
       <Nuxt />

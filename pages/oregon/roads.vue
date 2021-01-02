@@ -1,12 +1,24 @@
 <template>
   <div>
-    Oregon roads here
-    <!-- {{ allCams }} -->
-    {{ hwys }}
+    <h2 class="text-4xl">Oregon roads</h2>
+    <div>
+      <!-- {{ allCams }} -->
+      {{ hwys }}
+    </div>
+
+    <ul v-if="orderedHwys" class="grid grid-cols-4">
+      <li v-for="hwy in orderedHwys" :key="hwy.index">
+        <nuxt-link :to="{ name: 'oregon-road', params: { road: hwy.name } }">
+          {{ hwy.name }}
+        </nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+import _ from 'lodash'
+
 import tripcheckData from '../oregon/oregonroads.json'
 
 export default {
@@ -31,6 +43,12 @@ export default {
       allCams: [],
       hwys: [],
     }
+  },
+
+  computed: {
+    orderedHwys() {
+      return _.orderBy(this.hwys, 'name')
+    },
   },
 }
 </script>
