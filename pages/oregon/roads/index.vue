@@ -22,7 +22,6 @@
 
 <script>
 import _ from 'lodash'
-
 import tripcheckData from '../roads/oregonroads.json'
 
 export default {
