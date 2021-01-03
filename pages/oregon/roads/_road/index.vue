@@ -1,8 +1,14 @@
 <template>
   <div>
-    <h1 class="text-4xl">Oregon - {{ hwy }}</h1>
+    <p>
+      <nuxt-link to="/">Home</nuxt-link> >
+      <nuxt-link to="/oregon">Oregon</nuxt-link> >
+      <nuxt-link to="/oregon/roads">roads</nuxt-link> >
+      {{ hwy }}
+    </p>
+    <h1 class="text-4xl p-4">Oregon - {{ hwy }}</h1>
     <ul class="grid grid-cols-4">
-      <li v-for="cam in cams" :key="cam.index">
+      <li v-for="cam in cams" :key="cam.index" class="p-4">
         <nuxt-link :to="{ name: 'oregon-roads-road-cam', params: { ...cam } }">
           {{ cam['device-name'] }}
           <img :src="cam['cctv-url']" :alt="cam['device-name']" />

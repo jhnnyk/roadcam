@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h2 class="text-4xl">Oregon roads</h2>
-    <div>
-      <!-- {{ allCams }} -->
-      {{ hwys }}
-    </div>
-
+    <p>
+      <nuxt-link to="/">Home</nuxt-link> >
+      <nuxt-link to="/oregon">Oregon</nuxt-link> > roads
+    </p>
+    <h1 class="text-4xl p-4">Oregon roads</h1>
     <ul v-if="orderedHwys" class="grid grid-cols-4">
       <li v-for="hwy in orderedHwys" :key="hwy.index">
         <nuxt-link

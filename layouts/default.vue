@@ -16,3 +16,12 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss">
+a {
+  @apply text-blue-800;
+  &:hover {
+    @apply underline;
+  }
+}
+</style>
