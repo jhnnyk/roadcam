@@ -20,13 +20,24 @@
             />
             {{ cam.CameraView[0].CameraName }}
           </div>
+          <div
+            v-else-if="
+              cam.CameraView.ImageLocation.indexOf('http://') === 0 ||
+              cam.CameraView.ImageLocation.indexOf('https://') === 0
+            "
+          >
+            <img
+              :src="cam.CameraView.ImageLocation"
+              :alt="cam.CameraView.ViewDescription"
+            />
+            {{ cam.CameraView.CameraName }}
+          </div>
           <div v-else>
             <img
               :src="`https://www.cotrip.org/${cam.CameraView.ImageLocation}`"
               :alt="cam.CameraView.ViewDescription"
             />
             {{ cam.CameraView.CameraName }}
-            <!-- {{ cam.CameraView.ImageLocation }} -->
           </div>
         </nuxt-link>
       </li>
