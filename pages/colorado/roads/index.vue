@@ -27,13 +27,15 @@ export default {
       // add all cameras to local state
       this.allCams.push(cam)
 
-      // create list of highways
+      // find highway name
       let roadName = ''
       if (cam.CameraView[0]) {
         roadName = cam.CameraView[0].RoadName
       } else {
         roadName = cam.CameraView.RoadName
       }
+
+      // create list of highways
       const hwyIndex = this.hwys.findIndex(
         (hwy) => hwy.name === slugify(roadName)
       )
