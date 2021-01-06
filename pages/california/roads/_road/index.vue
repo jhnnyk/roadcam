@@ -13,11 +13,10 @@
           :to="{ name: 'california-roads-road-cam', params: { ...cam } }"
         >
           {{ cam.cctv.location.locationName }}
-          <!-- <img
-              :src="`https://www.cotrip.org/${cam.CameraView[0].ImageLocation}`"
-              :alt="cam.CameraView[0].ViewDescription"
-            />
-            {{ cam.CameraView[0].CameraName }} -->
+          <img
+            :src="cam.cctv.imageData.static.currentImageURL"
+            :alt="cam.cctv.location.locationName"
+          />
         </nuxt-link>
       </li>
     </ul>

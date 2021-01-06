@@ -15,17 +15,17 @@
       > {{ cam.cctv.location.locationName }}
     </p>
     <h1 class="text-4xl p-4">{{ cam.cctv.location.locationName }}</h1>
-    <!-- <div v-if="cam.CameraView[0]">
-      <div v-for="view in cam.CameraView" :key="view.index" class="mb-4">
-        <p>{{ view.CameraName }} - {{ view.Direction }}</p>
-        <img
-          class="mx-auto"
-          :src="`https://www.cotrip.org/${view.ImageLocation}`"
-          :alt="view.ViewDescription"
-        />
-        {{ view.ViewDescription }}
-      </div>
-    </div> -->
+
+    <img
+      class="mx-auto"
+      :src="cam.cctv.imageData.static.currentImageURL"
+      :alt="cam.cctv.location.locationName"
+    />
+    <p>
+      {{ cam.cctv.location.locationName }} on {{ cam.cctv.location.route }} near
+      {{ cam.cctv.location.nearbyPlace }} in
+      {{ cam.cctv.location.county }} county
+    </p>
   </div>
 </template>
 
