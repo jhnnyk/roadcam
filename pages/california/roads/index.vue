@@ -6,7 +6,7 @@
     </p>
     <h1 class="text-4xl p-4">California roads</h1>
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <li v-for="hwy in hwys" :key="hwy.index">
+      <li v-for="hwy in orderedHwys" :key="hwy.index">
         <nuxt-link
           :to="{ name: 'california-roads-road', params: { road: hwy.name } }"
         >
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import slugify from 'slugify'
 import data1 from '../roads/caroads1.json'
 import data2 from '../roads/caroads2.json'
@@ -53,6 +54,12 @@ export default {
       allCams: [],
       hwys: [],
     }
+  },
+
+  computed: {
+    orderedHwys() {
+      return _.orderBy(this.hwys, 'name')
+    },
   },
 
   methods: {
