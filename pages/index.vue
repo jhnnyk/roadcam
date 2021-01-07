@@ -17,6 +17,11 @@
       <li>
         <h2 class="text-3xl"><nuxt-link to="/oregon">Oregon</nuxt-link></h2>
       </li>
+      <li>
+        <h2 class="text-3xl">
+          <nuxt-link to="/washington">Washington</nuxt-link>
+        </h2>
+      </li>
     </ul>
   </div>
 </template>

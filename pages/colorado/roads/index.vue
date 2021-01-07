@@ -4,6 +4,7 @@
       <nuxt-link to="/">Home</nuxt-link> >
       <nuxt-link to="/colorado">Colorado</nuxt-link> > roads
     </p>
+
     <h1 class="text-4xl p-4">Colorado roads</h1>
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <li v-for="hwy in hwys" :key="hwy.index">

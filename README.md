@@ -18,3 +18,10 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Cam Count
+
+California: 2126
+Colorado: 820
+Oregon: 742
+Washington: 1489

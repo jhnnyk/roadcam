@@ -4,6 +4,7 @@
       <nuxt-link to="/">Home</nuxt-link> >
       <nuxt-link to="/california">California</nuxt-link> > roads
     </p>
+
     <h1 class="text-4xl p-4">California roads</h1>
     <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <li v-for="hwy in orderedHwys" :key="hwy.index">
