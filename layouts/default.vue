@@ -2,6 +2,15 @@
   <div class="text-gray-700 text-center">
     <TitleBar />
     <div class="container mb-8">
+      <div id="285154539">
+        <script type="text/javascript">
+          try {
+            window._mNHandle.queue.push(function () {
+              window._mNDetails.loadTag('285154539', '300x250', '285154539')
+            })
+          } catch (error) {}
+        </script>
+      </div>
       <Nuxt />
     </div>
   </div>
