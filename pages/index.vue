@@ -4,7 +4,7 @@
       Welcome to <nuxt-link :to="{ name: 'index' }">road.camera</nuxt-link>
     </h1>
     <p>Easily find webcams from all 50 states (coming soon)!</p>
-    <h4 class="text-xl p-4">Currently featuring over 3,000 webcams from:</h4>
+    <h4 class="text-xl p-4">Currently featuring over 5,000 webcams from:</h4>
     <ul>
       <li>
         <h2 class="text-3xl">
