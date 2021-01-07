@@ -33,7 +33,7 @@ export default {
 
     // add slug for link
     const camsWithSlug = await filteredCams.map((cam) => {
-      return { ...cam, cam: slugify(cam.CameraLocation.RoadName) }
+      return { ...cam, cam: slugify(cam.Title) }
     })
 
     this.cams = camsWithSlug
