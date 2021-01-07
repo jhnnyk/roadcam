@@ -21,7 +21,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Cam Count
 
-California: 2126
-Colorado: 820
-Oregon: 742
-Washington: 1489
+- California: 2126
+- Colorado: 820
+- Oregon: 742
+- Washington: 1489
