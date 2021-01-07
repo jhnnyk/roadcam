@@ -2,15 +2,7 @@
   <div class="text-gray-700 text-center">
     <TitleBar />
     <div class="container mb-8">
-      <div id="285154539">
-        <script type="text/javascript">
-          try {
-            window._mNHandle.queue.push(function () {
-              window._mNDetails.loadTag('285154539', '300x250', '285154539')
-            })
-          } catch (error) {}
-        </script>
-      </div>
+      <MediaNet />
       <Nuxt />
     </div>
   </div>
@@ -18,10 +10,12 @@
 
 <script>
 import TitleBar from '~/components/TitleBar.vue'
+import MediaNet from '~/components/MediaNet.vue'
 
 export default {
   components: {
     TitleBar,
+    MediaNet,
   },
 }
 </script>
