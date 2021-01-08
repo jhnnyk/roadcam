@@ -2,7 +2,6 @@
   <div class="text-gray-700 text-center">
     <TitleBar />
     <div class="container mb-8">
-      <MediaNet />
       <Nuxt />
     </div>
   </div>
@@ -10,12 +9,10 @@
 
 <script>
 import TitleBar from '~/components/TitleBar.vue'
-import MediaNet from '~/components/MediaNet.vue'
 
 export default {
   components: {
     TitleBar,
-    MediaNet,
   },
 }
 </script>
