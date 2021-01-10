@@ -45,7 +45,7 @@ import data11 from '../../roads/caroads11.json'
 import data12 from '../../roads/caroads12.json'
 
 export default {
-  async asyncData({ params }) {
+  async asyncData(context) {
     // create list of all cameras
     const allCams = []
 
@@ -87,7 +87,7 @@ export default {
     })
 
     const cam = await allCams.find(
-      (c) => slugify(c.cctv.location.locationName) === params.cam
+      (c) => slugify(c.cctv.location.locationName) === context.params.cam
     )
     return { cam }
   },
