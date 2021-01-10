@@ -13,6 +13,7 @@ import data11 from './pages/california/roads/caroads11.json'
 import data12 from './pages/california/roads/caroads12.json'
 import coTripData from './pages/colorado/roads/coloradoroads.json'
 import tripCheckData from './pages/oregon/roads/oregonroads.json'
+import waData from './pages/washington/roads/waroads.json'
 
 const allCams = []
 
@@ -222,6 +223,21 @@ const getAllCams = async () => {
       }) +
       '/' +
       slugify(cam['device-name'], {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
+  })
+
+  // Washington
+  await waData.forEach((cam) => {
+    cam.camSlug =
+      '/washington/roads/' +
+      slugify(cam.CameraLocation.RoadName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
+      '/' +
+      slugify(cam.Title, {
         remove: /[*+~.()'"!:@]/g,
         lower: true,
       })
