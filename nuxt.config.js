@@ -12,6 +12,7 @@ import data10 from './pages/california/roads/caroads10.json'
 import data11 from './pages/california/roads/caroads11.json'
 import data12 from './pages/california/roads/caroads12.json'
 import coTripData from './pages/colorado/roads/coloradoroads.json'
+import tripCheckData from './pages/oregon/roads/oregonroads.json'
 
 const allCams = []
 
@@ -20,97 +21,169 @@ const getAllCams = async () => {
   await data1.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data2.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data3.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data4.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data5.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data6.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data7.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data8.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data9.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data10.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data11.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
   await data12.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
-      slugify(cam.cctv.location.route) +
+      slugify(cam.cctv.location.route, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
       '/' +
-      slugify(cam.cctv.location.locationName)
+      slugify(cam.cctv.location.locationName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
     allCams.push(cam)
   })
 
@@ -125,9 +198,33 @@ const getAllCams = async () => {
     }
 
     cam.camSlug =
-      '/colorado/roads/' + slugify(roadName) + '/' + slugify(cam.Name)
+      '/colorado/roads/' +
+      slugify(roadName, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
+      '/' +
+      slugify(cam.Name, {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
 
     allCams.push(cam)
+  })
+
+  // Oregon
+  await tripCheckData.CCTVInventoryRequest.forEach((cam) => {
+    cam.camSlug =
+      '/oregon/roads/' +
+      slugify(cam['route-id'], {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      }) +
+      '/' +
+      slugify(cam['device-name'], {
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+      })
   })
 }
 
