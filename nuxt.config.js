@@ -12,92 +12,104 @@ import data10 from './pages/california/roads/caroads10.json'
 import data11 from './pages/california/roads/caroads11.json'
 import data12 from './pages/california/roads/caroads12.json'
 
-const CACams = []
+const allCams = []
 
-const getAllCACams = async () => {
+const getAllCams = async () => {
   await data1.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data2.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data3.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data4.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data5.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data6.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data7.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data8.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data9.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data10.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data11.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
   await data12.data.forEach((cam) => {
     cam.camSlug =
+      '/california/roads/' +
       slugify(cam.cctv.location.route) +
       '/' +
       slugify(cam.cctv.location.locationName)
-    CACams.push(cam)
+    allCams.push(cam)
   })
 }
 
@@ -144,10 +156,10 @@ export default {
 
   generate: {
     routes() {
-      return getAllCACams().then(() => {
-        return CACams.map((cam) => {
+      return getAllCams().then(() => {
+        return allCams.map((cam) => {
           return {
-            route: '/california/roads/' + cam.camSlug,
+            route: cam.camSlug,
             payload: cam,
           }
         })
