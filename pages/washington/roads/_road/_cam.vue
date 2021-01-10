@@ -26,7 +26,13 @@ import data from '../../roads/waroads.json'
 
 export default {
   async asyncData({ params }) {
-    const cam = await data.find((c) => slugify(c.Title) === params.cam)
+    const cam = await data.find(
+      (c) =>
+        slugify(c.Title, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === params.cam
+    )
     return { cam }
   },
 }

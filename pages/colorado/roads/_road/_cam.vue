@@ -57,7 +57,11 @@ import coTripData from '../../roads/coloradoroads.json'
 export default {
   async asyncData({ params }) {
     const cam = await coTripData.Cameras.find(
-      (c) => slugify(c.Name) === params.cam
+      (c) =>
+        slugify(c.Name, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === params.cam
     )
     return { cam }
   },

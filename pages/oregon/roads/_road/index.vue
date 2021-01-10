@@ -28,13 +28,24 @@ export default {
     // filter cams for this hwy
     const filteredCams = await tripCheckData.CCTVInventoryRequest.filter(
       (cam) => {
-        return cam['route-id'].toLowerCase() === this.$route.params.road
+        return (
+          slugify(cam['route-id'], {
+            remove: /[*+~.()'"!:@]/g,
+            lower: true,
+          }) === this.$route.params.road
+        )
       }
     )
 
     // add slug for link
     const camsWithSlug = await filteredCams.map((cam) => {
-      return { ...cam, cam: slugify(cam['device-name']) }
+      return {
+        ...cam,
+        cam: slugify(cam['device-name'], {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }),
+      }
     })
 
     this.cams = camsWithSlug

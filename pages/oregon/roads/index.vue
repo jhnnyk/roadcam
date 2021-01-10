@@ -23,6 +23,7 @@
 
 <script>
 import _ from 'lodash'
+import slugify from 'slugify'
 import tripcheckData from '../roads/oregonroads.json'
 
 export default {
@@ -33,11 +34,21 @@ export default {
 
       // create list of highways
       const hwyIndex = this.hwys.findIndex(
-        (hwy) => hwy.name === cam['route-id'].toLowerCase()
+        (hwy) =>
+          hwy.name ===
+          slugify(cam['route-id'], {
+            remove: /[*+~.()'"!:@]/g,
+            lower: true,
+          })
       )
 
       if (hwyIndex === -1) {
-        this.hwys.push({ name: cam['route-id'].toLowerCase() })
+        this.hwys.push({
+          name: slugify(cam['route-id'], {
+            remove: /[*+~.()'"!:@]/g,
+            lower: true,
+          }),
+        })
       }
     })
   },

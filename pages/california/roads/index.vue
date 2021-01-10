@@ -71,11 +71,21 @@ export default {
 
         // create list of highways
         const hwyIndex = this.hwys.findIndex(
-          (hwy) => hwy.name === slugify(cam.cctv.location.route)
+          (hwy) =>
+            hwy.name ===
+            slugify(cam.cctv.location.route, {
+              remove: /[*+~.()'"!:@]/g,
+              lower: true,
+            })
         )
 
         if (hwyIndex === -1) {
-          this.hwys.push({ name: slugify(cam.cctv.location.route) })
+          this.hwys.push({
+            name: slugify(cam.cctv.location.route, {
+              remove: /[*+~.()'"!:@]/g,
+              lower: true,
+            }),
+          })
         }
       })
     },

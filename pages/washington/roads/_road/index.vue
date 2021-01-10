@@ -28,12 +28,23 @@ export default {
   async fetch() {
     // filter cams for this hwy
     const filteredCams = await data.filter((cam) => {
-      return slugify(cam.CameraLocation.RoadName) === this.$route.params.road
+      return (
+        slugify(cam.CameraLocation.RoadName, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === this.$route.params.road
+      )
     })
 
     // add slug for link
     const camsWithSlug = await filteredCams.map((cam) => {
-      return { ...cam, cam: slugify(cam.Title) }
+      return {
+        ...cam,
+        cam: slugify(cam.Title, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }),
+      }
     })
 
     this.cams = camsWithSlug

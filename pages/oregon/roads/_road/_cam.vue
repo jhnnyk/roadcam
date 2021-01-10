@@ -27,7 +27,11 @@ import tripCheckData from '../../roads/oregonroads.json'
 export default {
   async asyncData({ params }) {
     const cam = await tripCheckData.CCTVInventoryRequest.find(
-      (c) => slugify(c['device-name']) === params.cam
+      (c) =>
+        slugify(c['device-name'], {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === params.cam
     )
     return { cam }
   },

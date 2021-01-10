@@ -60,12 +60,23 @@ export default {
         roadName = cam.CameraView.RoadName
       }
 
-      return slugify(roadName) === this.$route.params.road
+      return (
+        slugify(roadName, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === this.$route.params.road
+      )
     })
 
     // add slug for link
     const camsWithSlug = await filteredCams.map((cam) => {
-      return { ...cam, cam: slugify(cam.Name) }
+      return {
+        ...cam,
+        cam: slugify(cam.Name, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }),
+      }
     })
 
     this.cams = camsWithSlug

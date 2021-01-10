@@ -79,12 +79,23 @@ export default {
     })
 
     const filteredCams = await this.allCams.filter((cam) => {
-      return slugify(cam.cctv.location.route) === this.$route.params.road
+      return (
+        slugify(cam.cctv.location.route, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }) === this.$route.params.road
+      )
     })
 
     // add slug for link
     const camsWithSlug = await filteredCams.map((cam) => {
-      return { ...cam, cam: slugify(cam.cctv.location.locationName) }
+      return {
+        ...cam,
+        cam: slugify(cam.cctv.location.locationName, {
+          remove: /[*+~.()'"!:@]/g,
+          lower: true,
+        }),
+      }
     })
 
     this.cams = camsWithSlug
