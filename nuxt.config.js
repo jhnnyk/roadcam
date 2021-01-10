@@ -11,10 +11,12 @@ import data9 from './pages/california/roads/caroads9.json'
 import data10 from './pages/california/roads/caroads10.json'
 import data11 from './pages/california/roads/caroads11.json'
 import data12 from './pages/california/roads/caroads12.json'
+import coTripData from './pages/colorado/roads/coloradoroads.json'
 
 const allCams = []
 
 const getAllCams = async () => {
+  // California
   await data1.data.forEach((cam) => {
     cam.camSlug =
       '/california/roads/' +
@@ -111,6 +113,22 @@ const getAllCams = async () => {
       slugify(cam.cctv.location.locationName)
     allCams.push(cam)
   })
+
+  // Colorado
+  await coTripData.Cameras.forEach((cam) => {
+    // find highway name
+    let roadName = ''
+    if (cam.CameraView[0]) {
+      roadName = cam.CameraView[0].RoadName
+    } else {
+      roadName = cam.CameraView.RoadName
+    }
+
+    cam.camSlug =
+      '/colorado/roads/' + slugify(roadName) + '/' + slugify(cam.Name)
+
+    allCams.push(cam)
+  })
 }
 
 export default {
@@ -129,7 +147,7 @@ export default {
         content: 'traffic cameras and road webcams from across the USA',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
