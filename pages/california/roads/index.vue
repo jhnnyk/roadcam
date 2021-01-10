@@ -74,7 +74,7 @@ export default {
           (hwy) =>
             hwy.name ===
             slugify(cam.cctv.location.route, {
-              remove: /[*+~.()'"!:@]/g,
+              remove: /[*+~.()'"!/#:@]/g,
               lower: true,
             })
         )
@@ -82,7 +82,7 @@ export default {
         if (hwyIndex === -1) {
           this.hwys.push({
             name: slugify(cam.cctv.location.route, {
-              remove: /[*+~.()'"!:@]/g,
+              remove: /[*+~.()'"!/#:@]/g,
               lower: true,
             }),
           })

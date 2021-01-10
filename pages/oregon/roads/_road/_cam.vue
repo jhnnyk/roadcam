@@ -29,7 +29,7 @@ export default {
     const cam = await tripCheckData.CCTVInventoryRequest.find(
       (c) =>
         slugify(c['device-name'], {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === params.cam
     )

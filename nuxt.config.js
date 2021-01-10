@@ -23,12 +23,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -37,12 +37,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -51,12 +51,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -65,12 +65,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -79,12 +79,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -93,12 +93,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -107,12 +107,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -121,12 +121,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -135,12 +135,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -149,12 +149,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -163,12 +163,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -177,12 +177,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/california/roads/' +
       slugify(cam.cctv.location.route, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.cctv.location.locationName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
     allCams.push(cam)
@@ -201,12 +201,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/colorado/roads/' +
       slugify(roadName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.Name, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
 
@@ -218,12 +218,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/oregon/roads/' +
       slugify(cam['route-id'], {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam['device-name'], {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
   })
@@ -233,12 +233,12 @@ const getAllCams = async () => {
     cam.camSlug =
       '/washington/roads/' +
       slugify(cam.CameraLocation.RoadName, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       }) +
       '/' +
       slugify(cam.Title, {
-        remove: /[*+~.()'"!:@]/g,
+        remove: /[*+~.()'"!/#:@]/g,
         lower: true,
       })
   })

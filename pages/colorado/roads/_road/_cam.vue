@@ -59,7 +59,7 @@ export default {
     const cam = await coTripData.Cameras.find(
       (c) =>
         slugify(c.Name, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === params.cam
     )

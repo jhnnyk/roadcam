@@ -30,7 +30,7 @@ export default {
     const filteredCams = await data.filter((cam) => {
       return (
         slugify(cam.CameraLocation.RoadName, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === this.$route.params.road
       )
@@ -41,7 +41,7 @@ export default {
       return {
         ...cam,
         cam: slugify(cam.Title, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }),
       }

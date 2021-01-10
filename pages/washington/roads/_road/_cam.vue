@@ -29,7 +29,7 @@ export default {
     const cam = await data.find(
       (c) =>
         slugify(c.Title, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === params.cam
     )

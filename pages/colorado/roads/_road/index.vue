@@ -62,7 +62,7 @@ export default {
 
       return (
         slugify(roadName, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === this.$route.params.road
       )
@@ -73,7 +73,7 @@ export default {
       return {
         ...cam,
         cam: slugify(cam.Name, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }),
       }

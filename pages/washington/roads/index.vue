@@ -37,7 +37,7 @@ export default {
         (hwy) =>
           hwy.name ===
           slugify(cam.CameraLocation.RoadName, {
-            remove: /[*+~.()'"!:@]/g,
+            remove: /[*+~.()'"!/#:@]/g,
             lower: true,
           })
       )
@@ -45,7 +45,7 @@ export default {
       if (hwyIndex === -1) {
         this.hwys.push({
           name: slugify(cam.CameraLocation.RoadName, {
-            remove: /[*+~.()'"!:@]/g,
+            remove: /[*+~.()'"!/#:@]/g,
             lower: true,
           }),
         })

@@ -30,7 +30,7 @@ export default {
       (cam) => {
         return (
           slugify(cam['route-id'], {
-            remove: /[*+~.()'"!:@]/g,
+            remove: /[*+~.()'"!/#:@]/g,
             lower: true,
           }) === this.$route.params.road
         )
@@ -42,7 +42,7 @@ export default {
       return {
         ...cam,
         cam: slugify(cam['device-name'], {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }),
       }

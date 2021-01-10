@@ -41,7 +41,7 @@ export default {
         (hwy) =>
           hwy.name ===
           slugify(roadName, {
-            remove: /[*+~.()'"!:@]/g,
+            remove: /[*+~.()'"!/#:@]/g,
             lower: true,
           })
       )
@@ -49,7 +49,7 @@ export default {
       if (hwyIndex === -1) {
         this.hwys.push({
           name: slugify(roadName, {
-            remove: /[*+~.()'"!:@]/g,
+            remove: /[*+~.()'"!/#:@]/g,
             lower: true,
           }),
         })

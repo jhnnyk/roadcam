@@ -89,7 +89,7 @@ export default {
     const cam = await allCams.find(
       (c) =>
         slugify(c.cctv.location.locationName, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === context.params.cam
     )

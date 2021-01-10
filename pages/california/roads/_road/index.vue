@@ -81,7 +81,7 @@ export default {
     const filteredCams = await this.allCams.filter((cam) => {
       return (
         slugify(cam.cctv.location.route, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }) === this.$route.params.road
       )
@@ -92,7 +92,7 @@ export default {
       return {
         ...cam,
         cam: slugify(cam.cctv.location.locationName, {
-          remove: /[*+~.()'"!:@]/g,
+          remove: /[*+~.()'"!/#:@]/g,
           lower: true,
         }),
       }
